@@ -23,5 +23,11 @@ module.exports.getOrFindUser = async (user) => {
 }
 
 module.exports.findMap = async (hashOrKey) => {
-
+  if (hashOrKey.length > 6) {
+    // Asssume hash
+    return await getByHash(hashOrKey)
+  } else {
+    // Assume key
+    return await getByKey(hashOrKey)
+  }
 }
