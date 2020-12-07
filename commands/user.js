@@ -3,8 +3,8 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports.run = async (bot, message, args) => {
   const ssid = args[1]
-  let { scores, player } = await getOrFindUser(ssid).catch(e => {
-    return {scores: null, player: null }
+  let { player } = await getOrFindUser(ssid).catch(e => {
+    return { player: null }
   })
 
   if (player) {

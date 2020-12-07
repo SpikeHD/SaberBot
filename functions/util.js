@@ -1,4 +1,5 @@
 const { getPlayer, searchPlayers } = require('node-scoresaber')
+const { getByHash, getByKey } = require('beatsaver')
 
 module.exports.getOrFindUser = async (user) => {
   let scores, player
@@ -19,4 +20,8 @@ module.exports.getOrFindUser = async (user) => {
   }
 
   return { scores, player }
+}
+
+module.exports.findMap = async (hashOrKey) => {
+
 }
