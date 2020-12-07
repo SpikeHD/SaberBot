@@ -3,6 +3,7 @@ const bot = new Discord.Client()
 const fs = require('fs')
 const { token, prefix } = require('./config.json')
 
+bot.commands = new Discord.Collection()
 bot.login(token)
 
 bot.on('ready', () => {
