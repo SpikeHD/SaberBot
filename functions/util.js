@@ -1,7 +1,7 @@
 const { getPlayer, searchPlayers } = require('node-scoresaber')
 
 module.exports.getOrFindUser = async (user) => {
-  let scores = null, player = null
+  let scores, player
 
   if (parseInt(user)) {
     // Get by ID
@@ -13,7 +13,6 @@ module.exports.getOrFindUser = async (user) => {
 
     // More than one result?
     if (players && players.length === 1) {
-      console.log('One result')
       player = await players[0].get()
       scores = await player.getTopScores()
     }

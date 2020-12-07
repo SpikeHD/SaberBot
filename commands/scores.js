@@ -10,7 +10,9 @@ const diffMap = {
 
 module.exports.run = async (bot, message, args) => {
   const ssid = args[1]
-  let { scores, player } = await getOrFindUser(ssid).catch(e => {})
+  let { scores, player } = await getOrFindUser(ssid).catch(e => {
+    return {scores: null, player: null }
+  })
 
   if (player) {
     const embed = new MessageEmbed()
