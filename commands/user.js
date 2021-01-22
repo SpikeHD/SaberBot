@@ -1,6 +1,12 @@
 const { getOrFindUser } = require('../functions/util')
 const { MessageEmbed } = require('discord.js')
 
+module.exports.info = {
+  name: 'user',
+  usage: '$user [player name or ID]',
+  example: '$user spikehd',
+}
+
 module.exports.run = async (bot, message, args) => {
   const ssid = args[1]
   let { player } = await getOrFindUser(ssid).catch(e => {

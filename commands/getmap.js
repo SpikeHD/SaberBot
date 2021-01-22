@@ -1,6 +1,12 @@
 const { findMap } = require('../functions/util')
 const { MessageEmbed } = require('discord.js')
 
+module.exports.info = {
+  name: 'getmap',
+  usage: '$getmap [key or hash]',
+  example: '$getmap e8c8',
+}
+
 module.exports.run = async (bot, message, args) => {
   const mid = args[1]
 

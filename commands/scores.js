@@ -8,10 +8,16 @@ const diffMap = {
   9: 'Expert+'
 }
 
+module.exports.info = {
+  name: 'scores',
+  usage: '$scores [player name or ID]',
+  example: '$scores spikehd',
+}
+
 module.exports.run = async (bot, message, args) => {
   const ssid = args[1]
   let { scores, player } = await getOrFindUser(ssid).catch(e => {
-    return {scores: null, player: null }
+    return { scores: null, player: null }
   })
 
   if (player) {

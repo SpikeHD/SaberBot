@@ -1,6 +1,12 @@
 const { find } = require('beatsaver')
 const { MessageEmbed } = require('discord.js')
 
+module.exports.info = {
+  name: 'findmaps',
+  usage: '$findmaps [query]',
+  example: '$findmaps camellia',
+}
+
 module.exports.run = async (bot, message, args) => {
   const query = args[1]
   
