@@ -15,6 +15,8 @@ bot.on('ready', () => {
     bot.commands.set(command.replace('.js', ''), props)
   })
 
+  bot.user.setActivity(`Use ${prefix}help!`, { type: 'PLAYING' })
+
   console.log('SaberBot is up and running!')
 })
 
