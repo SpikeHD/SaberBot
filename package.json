@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/SpikeHD/SaberBot#readme",
   "dependencies": {
-    "beatsaver": "^1.0.2",
+    "beatsaver": "^1.0.3",
     "discord.js": "^12.5.1",
     "node-scoresaber": "^2.0.0"
   }
